@@ -23,4 +23,4 @@ patches:
 configMapGenerator:
 - name: frontend-config
   literals:
-  - REACT_APP_API_BASE_URL=http://k8s-user16ap-backendi-e0f1b22e8d-288714698.ap-northeast-2.elb.amazonaws.com
+  - REACT_APP_API_BASE_URL=k8s-user16ap-backendi-e0f1b22e8d-288714698.ap-northeast-2.elb.amazonaws.com
