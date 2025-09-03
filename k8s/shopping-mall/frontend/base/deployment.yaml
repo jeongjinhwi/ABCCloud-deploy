@@ -20,9 +20,9 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
-        envFrom:
-        - configMapRef:
-            name: frontend-config
+        env:
+        - name: REACT_APP_API_BASE_URL
+          value: "k8s-user16ap-backendi-e0f1b22e8d-288714698.ap-northeast-2.elb.amazonaws.com"
         readinessProbe:
           httpGet:
             path: /healthz
