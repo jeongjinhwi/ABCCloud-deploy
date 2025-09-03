@@ -10,7 +10,7 @@ replicas:
 images:
 - name: frontend-image
   newName: 833558168913.dkr.ecr.ap-northeast-2.amazonaws.com/user16/frontend
-  newTag: 1.2.2
+  newTag: 1.2.1
 
 patches:
 - path: resource-patch.yaml
