@@ -1,20 +1,15 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+resources:
+- ../../base
+
 replicas:
 - count: 1
   name: frontend
 
 images:
-- name: 833558168913.dkr.ecr.ap-northeast-2.amazonaws.com/user16/frontend
-  newName: 833558168913.dkr.ecr.ap-northeast-2.amazonaws.com/user16/frontend
-  newTag: v1.2.0
 - name: frontend-image
-  newName: 833558168913.dkr.ecr.ap-northeast-2.amazonaws.com/user16/frontend
-  newTag: v1.2.1
-
-resources:
-- ../../base
 
 patches:
 - path: resource-patch.yaml
@@ -25,3 +20,8 @@ patches:
   target:
     kind: ConfigMap
     name: frontend-config
+
+configMapGenerator:
+- name: frontend-config
+  literals:
+  - REACT_APP_API_BASE_URL=http://k8s-user16ap-backendi-e0f1b22e8d-1776638672.ap-northeast-2.elb.amazonaws.com
