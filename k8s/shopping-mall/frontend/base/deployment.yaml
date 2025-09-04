@@ -16,8 +16,8 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: frontend-image
-        image: 833558168913.dkr.ecr.ap-northeast-2.amazonaws.com/user16/frontend:v1.2.1
+      - name: frontend
+        image: frontend-image
         ports:
         - containerPort: 80
         envFrom:
