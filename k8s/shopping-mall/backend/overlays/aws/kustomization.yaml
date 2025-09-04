@@ -1,0 +1,21 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../base
+
+namespace: user16-app
+
+replicas:
+- count: 1
+  name: backend
+
+images:
+- name: backend-image
+  newName: 833558168913.dkr.ecr.ap-northeast-2.amazonaws.com/user16/backend
+  newTag: 1.2.0
+
+patches:
+- path: resource-patch.yaml
+  target:
+    kind: Deployment
+    name: backend
