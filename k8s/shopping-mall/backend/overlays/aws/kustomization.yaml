@@ -3,6 +3,8 @@ kind: Kustomization
 resources:
 - ../../base
 
+namespace: user16-app
+
 replicas:
 - count: 1
   name: backend
