@@ -9,7 +9,7 @@ replicas:
   name: frontend
 
 images:
-- name: frontend-image
+- name: 833558168913.dkr.ecr.ap-northeast-2.amazonaws.com/user16/frontend
   newName: 833558168913.dkr.ecr.ap-northeast-2.amazonaws.com/user16/frontend
   newTag: v1.2.0
 
