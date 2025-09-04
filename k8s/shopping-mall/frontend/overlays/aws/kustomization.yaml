@@ -18,3 +18,7 @@ patches:
   target:
     kind: Deployment
     name: frontend
+- path: configmap-patch.yaml
+  target:
+    kind: ConfigMap
+    name: frontend-config
