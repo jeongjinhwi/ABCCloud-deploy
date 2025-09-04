@@ -27,3 +27,4 @@ configMapGenerator:
 - literals:
   - REACT_APP_API_BASE_URL=http://k8s-user16ap-backendi-e0f1b22e8d-1776638672.ap-northeast-2.elb.amazonaws.com
   name: frontend-config
+  behavior: merge
