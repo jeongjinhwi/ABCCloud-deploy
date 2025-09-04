@@ -11,7 +11,7 @@ replicas:
 images:
 - name: frontend-image
   newName: 833558168913.dkr.ecr.ap-northeast-2.amazonaws.com/user16/frontend
-  newTag: v1.2.2
+  newTag: v1.2.3
 
 patches:
 - path: resource-patch.yaml
@@ -24,7 +24,7 @@ patches:
     name: frontend-config
 
 configMapGenerator:
-- literals:
+- behavior: merge
+  literals:
   - REACT_APP_API_BASE_URL=http://k8s-user16ap-backendi-e0f1b22e8d-1776638672.ap-northeast-2.elb.amazonaws.com
   name: frontend-config
-  behavior: merge
