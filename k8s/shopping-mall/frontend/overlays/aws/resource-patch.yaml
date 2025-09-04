@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: frontend
-    namespace: user16-app
+  name: frontend
+  namespace: user16-app
 spec:
   template:
     spec:
